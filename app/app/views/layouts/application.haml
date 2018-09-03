@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title App
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+      %a.navbar-brand{ href: "#" }
+        Navbar
+      %ul.navbar-nav.mr-auto
+        %li.nav-item
+          %a.nav-link{ href: "#{ link_to 'Home', site_index_path }" }
+            Home
+        %li.nav-item
+          %a.nav-link{ href: "#" }
+            About
+          
+    =yield
