@@ -1,0 +1,7 @@
+.container
+  %h1 Tasks#index
+  %ul
+    - @tasks.each do |task|
+      - task_status = "task-done" if task.status == "done"
+      %li{ :class => task_status }= task.summary
+    
