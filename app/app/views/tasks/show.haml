@@ -1,6 +1,5 @@
-.container
-  %h1 Tasks#index
-  %ul
-    - @tasks.each do |task|
-      %li{ :class => ("task-done" if task.done?) }= task.summary
+%h1 Tasks#index
+%ul
+  - @tasks.each do |task|
+    %li{ :class => ("task-done" if task.done?) }= task.summary
     
