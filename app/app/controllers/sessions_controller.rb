@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       flash[:success] = "You have successfully logined!"
       redirect_to task_url  
     else
-      flash[:error] = "Wrong login or password"
+      flash[:alert] = "Wrong login or password"
       redirect_to login_url
     end
   end
