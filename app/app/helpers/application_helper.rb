@@ -11,6 +11,14 @@ module ApplicationHelper
   def get_current_user
     @current_user ||= session[:current_user_id] && User.find_by(id: session[:current_user_id])
   end
+
+  def is_logined?
+    !get_current_user.nil?
+  end
+
+  def authenticate_user
+    redirect_to login_url unless is_logined?
+  end
 end
 
 
