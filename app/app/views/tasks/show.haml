@@ -1,4 +1,5 @@
-%h1 Tasks#index
+%h1 Your tasks 
+%a.fa.fa-plus-circle{ href: new_task_path } Add new
 %ul
   - @tasks.each do |task|
     %li{ :class => ("task-done" if task.done?) }= task.summary
