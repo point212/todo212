@@ -2,5 +2,6 @@
 %a.fa.fa-plus-circle{ href: new_task_path } Add new
 %ul
   - @tasks.each do |task|
-    %li{ :class => ("task-done" if task.done?) }= task.summary
+    %li{ :class => ("task-done" if task.done?) }
+      %a{ href: edit_task_path(task) }= task.summary
     
